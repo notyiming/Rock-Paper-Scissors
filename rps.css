@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Varela Round', sans-serif;
+}
+
+body{
+	background-color: #243137;
+	color: white;
+}
+header{
+	background-color: white;
+	color: #243137;
+	text-align: center;
+	padding:1.3em;
+}
+
+.scoreBoard{
+	width: 200px;
+	margin: 20px auto;
+	margin-top: 40px;
+	border:3px white solid;
+	font-size: 46px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 20px;
+	position: relative;
+}
+
+.badge{
+	background-color: #C05D37;
+	font-size: 20px;
+	padding: 2px 10px;
+	border-radius: 5px;
+}
+
+#user-label{
+	position: absolute;
+	top: 15px;
+	left: -70px;
+}
+
+#comp-label{
+	position: absolute;
+	top: 15px;
+	left: 208px;
+}
+
+#user-choice{
+	position: absolute;
+	font-size: 35px;
+	top: 43px;
+	left: -130px;
+}
+
+#comp-choice{
+	position: absolute;
+	font-size: 35px;
+	top: 43px;
+	left: 230px;
+}
+
+.result{
+	text-align: center;
+	font-size: 30px;
+}
+
+.choice{
+	display: inline-block;
+	border: 4px solid white;
+	border-radius: 50%;
+	padding: 10px;
+	margin: 0 20px;
+	transition: 0.3s;
+}
+
+.choice:hover{
+	cursor: pointer;
+	background-color: #5D8BE0;
+}
+
+.choices{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.intro{
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	transition: opacity 0.5s ease;
+}
+
+.intro button{
+	width: 150px;
+	height: 50px;
+	background: none;
+	border: none;
+	border-radius: 8px; 
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	background-color: #C05D37;
+	transition: 0.2s;
+}
+
+.intro button:hover{
+	color: #C05D37;
+	background-color: white;
+
+}
+
+.match{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.5s ease;
+
+}
+
+.hands{
+	display: flex;
+	justify-content: space-around;
+}
+
+.user-hand{
+	transform: rotateY(180deg);
+}
+
+#actionText{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.green-glow{
+	border: 4px solid green;
+}
+
+.red-glow{
+	border: 4px solid red;
+}
+
+.gray-glow{
+	border: 4px solid gray;
+}
+
+div.fadeOut{
+	opacity: 0;
+	pointer-events: none;
+}
+
+div.fadeIn{
+	opacity: 1;
+	pointer-events: all;
+}
+
+@keyframes shakeUser{
+	0%{
+		transform: rotateY(180deg) translateY(0px);
+	}
+	15%{
+		transform: rotateY(180deg) translateY(-50px);
+	}
+	25%{
+		transform: rotateY(180deg) translateY(0px);
+	}
+	35%{
+		transform: rotateY(180deg) translateY(-50px);
+	}
+	50%{
+		transform: rotateY(180deg) translateY(0px);
+	}
+	65%{
+		transform: rotateY(180deg) translateY(-50px);
+	}
+	75%{
+		transform: rotateY(180deg) translateY(0px);
+	}
+	85%{
+		transform: rotateY(180deg) translateY(-50px);
+	}
+	100%{
+		transform: rotateY(180deg) translateY(0px);
+	}
+}
+
+@keyframes shakeComp{
+	0%{
+		transform: translateY(0px);
+	}
+	15%{
+		transform: translateY(-50px);
+	}
+	25%{
+		transform: translateY(0px);
+	}
+	35%{
+		transform: translateY(-50px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	65%{
+		transform: translateY(-50px);
+	}
+	75%{
+		transform: translateY(0px);
+	}
+	85%{
+		transform: translateY(-50px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
